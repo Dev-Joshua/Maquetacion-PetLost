@@ -28,7 +28,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   backdrop-filter: blur(2px);
 }
 
@@ -133,6 +133,7 @@ header img {
   width: 650px;
   display: flex;
   flex-direction: column;
+  margin: 100px 0px;
 }
 
 .contact-details {
