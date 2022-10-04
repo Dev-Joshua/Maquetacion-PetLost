@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --label: #D6CAF8;
+  --black: #000000;
+  --header: #0D1122;
+  --fondo-container: #1e1e1eb5;
+  --letter: #CBF4F7;
+  --white: #ffff;
+  --button: #524388;
+  --hover: #00eeff80;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  outline: none;
+}
+
+body {
+  display: flex;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/imagen-fondo2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* max-width: 100vh; */
+  flex-direction: column;
+  background-position: center;
+  background-attachment: fixed;
+  backdrop-filter: blur(2px);
+}
+
+
+/* Header */
+header {
+  width: 100%;
+  height: 120px;
+  /* background-color: var(--header); */
+}
+
+header img {
+  width: 250px;
+  margin: 10px;
+}
+
+.profile-image {
+  margin-top: 8px;
+  margin-right: 50px;
+}
+
+.profile-image img {
+  width: 75px;
+}
+
+.nav {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 120px;
+  margin: 0px 50px 0px 50px;
+}
+
+.nav .logo {
+  margin-top: 35px;
+}
+
+/* escondo el hamburguer-menu */
+#menu, #menu-check {
+  display: none;
+}
+
+.container-list {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  /* margin-left: 60vh; */
+}
+
+.container-list ul {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  font-weight: bold;
+}
+
+.container-list ul li {
+  list-style-type: none;
+}
+
+.container-list ul li a {
+  color: var(--label);
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.container-list ul li a:hover {
+  color: var(--letter);
+  text-decoration-line: underline;
+  font-weight: bold;
+}
+
+.container-account {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.container-account ul {
+  display: none;
+  list-style: none;
+  padding: 0px;
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  margin: 25px 0px -192px 60px;
+  background-color: var(--button);
+  color: var(--letter);
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.container-account:hover {
+  background-color: var(--button);
+  width: 200px;
+}
+
+.container-account:hover ul {
+  display: block;
+  text-align: center;
+}
+
+.container-account li {
+  margin: 16px 0;
+}
+
+.container-account li a {
+  color: #ffffff;
+  text-decoration: none;
+
+}
+
+.container-account li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  height: 110vh;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.publishing-user {
+  width: auto;
+  /* height: 100vh; */
+  background-color: #fdffff69;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.publishing-user h2 {
+  /* margin: 40px 0px; */
+  text-align: center;
+  font-size: 30px;
+}
+
+.cards-ads {
+  height: 150px;
+  width: 700px;
+  margin-top: 30px;
+}
+
+.cards-ads .card {
+  background-color: var(--white);
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.card input {
+  background-color: var(--button);
+  border-radius: 8px;
+  height: 20px;
+  margin-top: 5px;
+  width: 80px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.card input:hover {
+  background-color: var(--label);
+  color: #000000;
+}
+
+button {
+  background-color: var(--button);
+  border-radius: 8px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  /* padding: 2px; */
+  margin: 15px 0px;
+  cursor: pointer;
+  border: none;
+  width: 18%;
+  margin-top: 50px;
+}
+
+button a {
+  text-decoration: none;
+  color: var(--letter);
+}
+
+button:hover,
+.edit a:hover {
+  background-color: var(--label);
+  animation: .1s ease-in;
+  color: #000000;
+}
+
+.swal2-styled {
+  width: 60px;
+}
+
+
+@media (max-width: 1100px) {
+  .nav {
+    margin: 0px;
+  }
+  .nav .logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+ 
+
+}
+
+@media (max-width: 800px) {
+  .logo {
+    display: none;
+  }
+  .nav {
+    margin-right: 20px;
+  }
+
+  .profile-image {
+    display: none;
+  }
+  
+  .container-account ul {
+    display: block;
+    place-content: space-between;
+    margin: 0px;
+    border-radius: 5px;
+    width: 210px;
+    padding: 5px;
+  }
+  .container-account ul li {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  /* .container-account ul li a:hover {
+    color: #CBF4F7;
+  } */
+  #menu-check:not(:checked) ~ .container-account .profile-list {
+    display: none;
+  }
+
+  #menu-check:checked ~ .container-account {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    /* border: 3px solid var(--label); */
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    z-index: 9999;
+    color: var(--label);
+  }
+
+  #menu:hover {
+    color: var(--letter);
+  }
+
+  #menu-cerrar {
+    display: none;
+  }
+
+  header .container-account {
+    position: absolute;
+  }
+  .publishing-user {
+    width: 600px;
+  }
+  .publishing-user h2 {
+    font-size: 25px;
+  }
+  button {
+    width: 130px;
+  }
+  .cards-ads {
+    width: 545px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-list ul {
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+  .container-list ul li {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .container-list ul li a{
+    font-size: 20px;
+  }
+  .container-account ul {
+    width: 210px;
+    padding: 5px;
+  }
+  .container-account ul li {
+    font-size: 16px;
+    margin-top: 50px;
+  }
+  #menu {
+    font-size: 30px;
+    top: 40px;
+  }
+ 
+  .publishing-user {
+    width: 440px;
+  }
+  .cards-ads {
+    width: 390px;
+  }
+  .publishing-user h2 {
+    font-size: 22px;
+  }
+}

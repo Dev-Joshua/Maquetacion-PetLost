@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicacion</title>
+  <link rel="icon" type="image/png" href="../assets/icon/favicon.png">
+  <link rel="stylesheet" href="../styles/add_ad.css">
+</head>
+
+<body>
+  <header>
+    <section class="nav">
+      <a href="../index.html">
+        <img class="logo" src="../assets/logos/logo2.png" alt="logo">
+      </a>
+      <input type="checkbox" id="menu-check">
+      <label id="menu" for="menu-check">
+        <span id="menu-abrir">&#9776;</span>
+        <span id="menu-cerrar">X</span>
+      </label>
+      <div class="container-list">
+        <ul>
+          <li>
+            <a href="./home.html">Inicio</a>
+          </li>
+          <li>
+            <a href="./info.html">Informacion</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container-account">
+        <div class="profile-image">
+          <img src="../assets/icon/profile-image color.png" alt="icon-profile">
+        </div>
+        <ul class="profile-list">
+          <li><a href="./profile.html">Perfil</a></li>
+          <li><a href="./publishing_user.html">Anuncios</a></li>
+          <li><a href="../index.html">Cerrar sesión</a></li>
+        </ul>
+      </div>
+    </section>
+  </header>
+  <main class="container-main">
+    <!-- <img src="../assets/img/foto_fondo3.jpg" width="400px" height="300px" alt="foto-fondo"> -->
+    <section class="container-form">
+      <div class="icon-closed">
+        <a href="./home.html">
+          <img src="../assets/icon/closed - color.png" width="30px" height="30px" alt="cerrar">
+        </a>
+      </div>
+      <div class="title">
+        <h2>Nuevo anuncio</h2>
+      </div>
+      <form class="formulario" onsubmit="createPet(event)">
+        <label for="name">Nombre mascota:</label>
+        <input type="varchar" name="name">
+        <label for="location">Fecha de perdida:</label>
+        <input type="date" name="dateLost">
+        <label for="location">Lugar de perdida:</label>
+        <input type="varchar" name="placeLost">
+        <!-- Seleccionar perro o gato -->
+        <div class="form-select">
+          <input type="radio" id="cat" name="pets" value="cat">
+          <label for="cat">Gato</label>
+          <br>
+          <input type="radio" id="dog" name="pets" value="dog" checked>
+          <label for="dog">Perro</label>
+        </div>
+
+        <label for="descripcion">Descripción del anuncio:</label>
+        <!-- <input type="text" id="details" placeholder="Hora de perdida, rasgos de tu mascota, visto por ultima vez...etc"> -->
+        <textarea type="text" name="text" id="details" rows="5" cols="50"
+          placeholder="Hora de perdida, rasgos de tu mascota, visto por ultima vez...etc"></textarea>
+        <div class="input-file" id="src-file">
+          <label for="pics">Fotos de tu mascota:</label>
+          <div>
+            <!-- <img src="../assets/icon/add-img.png" width="80px" height="80px" alt=""> -->
+          </div>
+          <input name="photo" accept="image/*" type="file" id="input_image">
+        </div>
+        <button type="submit">Crear Anuncio</button>
+      </form>
+    </section>
+  </main>
+  <script src="../scripts/add_add.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+
+</html>

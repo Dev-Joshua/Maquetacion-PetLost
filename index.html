@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetLost</title>
+  <link rel="icon" type="image/png" href="./assets/icon/favicon.png">
+  <script src="https://kit.fontawesome.com/b3310eed91.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="./index.html">
+        <img src="./assets/logos/logo2.png" alt="logo" />
+      </a>
+    </nav>
+  </header>
+  <main>
+    <section class="container-main">
+      <section class="texto-login">
+        <h1 class="texto-login-ani">Bienvenidos</h1>
+        <p>WEB dedicada a encontrar su mascota perdida.</p>
+      </section>
+      <section class="login">
+        <form id="form" onsubmit="login(event)">
+          <label>Email</label>
+          <input id="email" name="email" type="email" placeholder="yourUser@example.com" onkeydown="validation();"
+            required autofocus />
+          <!-- <span id="text"></span> -->
+          <label>Contraseña</label>
+          <input name="password" type="password" placeholder="*************" id="password" required />
+          <div id="toggle" onclick="showHide();">
+          </div>
+          <button type="submit">
+            <a href="#" onclick="login(event)">Iniciar sesión</a>
+          </button>
+          <a href="">¿Olvidaste tu contraseña?</a>
+          <h3>¿Aún no tienes cuenta?</h3>
+          <button>
+            <a href="./html/register.html">Regístrate</a>
+          </button>
+        </form>
+      </section>
+    </section>
+  </main>
+  <!-- <footer class="footer">
+    <section class="footer-logos">
+      <article class="footer-logos-co">
+        <img src="./assets/logomintic.png">
+        <img src="./assets/logoutp.png">
+        <div>
+          <span class="copyright">&copy <em>PetLost</em>. Todos los derechos reservados. 2022</span>
+        </div>
+      </article>
+    </section>
+  </footer> -->
+  <!-- Funcionalidad de la web -->
+  <script src="./scripts/index.js"></script>
+  <!-- Alertas -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
